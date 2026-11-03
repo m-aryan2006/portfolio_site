@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================
+   DESKTOP / LAPTOP BASE STYLES
+   ========================================= */
+
+#navbar {
+    background-color: #222222;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: center; /* Dono ko center mein laayega, dur dur nahi rahenge */
+    align-items: center;
+    gap: 400px; /* PORTFOLIO aur Links ke beech ka distance */
+}
+
+#port_text {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#navlink1, #navlink2, #navlink3, #navlink4 {
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter', sans-serif; 
+    font-weight: 500;                 
+    letter-spacing: 0.05em;          
+    text-transform: capitalize; 
+    padding-left: 0; 
+    font-size: 16px;
+    transition: color 0.3s ease; /* Hover effect ke liye smooth transition */
+}
+
+#navlink1:hover, #navlink2:hover, #navlink3:hover, #navlink4:hover {
+    color: #FF8660; 
+}
+
+#main_content {
+    background-color: #0c0c0c;
+    color: white;
+    font-family: 'Inter', sans-serif; 
+    font-weight: 500;                 
+    letter-spacing: 0.05em;          
+    text-transform: capitalize; 
+}
+
+#profile_image {
+    border-color: #191919;
+    border-radius: 150px;
+    height: 223px;
+    width:251px;
+}
+
+#name:hover {
+    color:red;
+}
+
+#intro {
+    text-align: center;
+    padding-top: 50px;
+}
+
+#intro_text {
+    text-align: center;
+    font-size: 40px;
+}
+
+#about_it {
+    text-decoration: none;
+    color: red;
+}
+
+#contact {
+    text-align: center;
+}
+
+#contact_button {
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffffff;
+    color:#161513;
+    font-size: 15px;
+    font-weight: bold;
+    width: 130px;
+    height: 50px;
+    border-width: 1px;
+    border-radius: 25px;
+}
+
+#Download_cv {
+    text-align: center;
+    text-decoration: none;
+    background-color:#161513;
+    color:#ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    width: 130px;
+    height: 50px;
+    border-color:#ffffff;
+    border-width: 2px;
+    border-radius: 25px;
+}
+
+#experience_with {
+    text-align: center;
+    font-size: 25px;
+}
+
+#experience_with:hover {
+    color:red;
+}
+
+#projects {
+    text-align: center;
+}
+
+#project_image {
+    text-align: center;
+    border-radius:10px;
+    height:280px;
+    width:390px;
+}
+
+#p_text {
+    color:#FF8660;
+    font-size: 22px;
+    font-family: Poppins,sans-serif;
+    font-weight: bolder;
+}
+
+#p_text:hover{
+    color:red;
+}
+
+#experience {
+    text-align: center;
+}
+
+#exp{
+    font-size: 22px;
+}
+
+#exp:hover {
+    color:red;
+}
+
+#company_img{
+    height: 60px;
+    width: 100px;
+    border-radius: 20px;
+}
+
+#contact_info{
+    color:#ffffff;
+    font-family: 'Inter', sans-serif;
+    background-color:#191919;
+}
+
+#email_logo {
+    height: 18px;
+    width: 20px;
+}
+
+#email {
+    text-decoration: none;
+    color:#ffffff;
+}
+
+#email:hover {
+    color: red;
+}
+
+#contact_info_div {
+    background-color: #191919;
+    padding-left: 350px;
+    padding-right: 350px;
+    border-color: red;
+}
+
+#con_text {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#con_text_q {
+    text-align: left;
+}
+
+#con_text:hover {
+    color:red;
+}
+
+#social_img {
+    height: 30px;
+    width: 30px;
+
+}
+
+/* =========================================
+   TABLET VIEW (Max width 1024px)
+   ========================================= */
+@media screen and (max-width: 1024px) {
+    #navbar {
+        padding: 20px 30px;
+    }
+
+    #intro_text {
+        font-size: 34px;
+    }
+
+    /* Footer ki side padding kam ki taaki tablet par fit ho */
+    #contact_info_div {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+/* =========================================
+   MOBILE VIEW (Max width 768px)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    
+    /* --- NAVBAR FIX --- */
+    #navbar {
+        flex-direction: column; /* PORTFOLIO upar, baaki niche */
+        justify-content: center;
+        gap: 15px; /* Portfolio aur links ke beech space */
+        padding: 15px 10px;
+    }
+
+    #port_text {
+        font-size: 24px;
+    }
+
+    /* Links container - Sab ek line mein rahenge */
+    .nav-links {
+        display: flex;
+        flex-direction: row; /* Ek line mein side-by-side */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap; /* IMPORTANT: Isse links agli line mein nahi jayenge */
+        gap: 25px; /* <--- PROPER GAP BETWEEN LINKS */
+        width: 100%;
+    }
+
+    #navlink1, #navlink2, #navlink3, #navlink4 {
+        font-size: 13px; /* Chhota font taaki gap ke baad bhi fit ho jayein */
+        padding: 0;
+        white-space: nowrap; 
+    }
+
+    /* --- MAIN CONTENT FIX --- */
+    #intro_text {
+        font-size: 28px;
+        padding: 0 10px;
+        line-height: 1.3;
+    }
+
+    #intro p:not(#intro_text) {
+        font-size: 14px;
+        padding: 0 15px;
+        line-height: 1.6;
+    }
+
+    /* Buttons ko ek dusre ke niche laane ke liye */
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Images ko mobile screen ke hisab se adjust kiya */
+    #project_image {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    #experience_with img {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    /* --- FOOTER FIX --- */
+    #contact_info_div {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    #con_text_q {
+        text-align: center;
+    }
+}
+
+/* =========================================
+   VERY SMALL MOBILE DEVICES (Max width 400px)
+   ========================================= */
+@media screen and (max-width: 400px) {
+    #port_text {
+        font-size: 20px;
+    }
+
+    /* Chhote phones par gap aur font thoda aur kam kiya */
+    .nav-links {
+        gap: 15px; /* Gap adjust kiya taaki screen se bahar na jaye */
+    }
+
+    #navlink1, #navlink2, #navlink3, #navlink4 {
+        font-size: 11px; 
+    }
+
+    #profile_image {
+        width: 180px;
+        height: 160px;
+    }
+
+    #intro_text {
+        font-size: 24px;
+    }
+
+    #experience_with img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    #contact_info_div {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
