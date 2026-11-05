@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar {
+            background-color: #222222;
+            padding: 25px 50px;
+            display: flex;
+            justify-content: center;
+            /* Dono ko center mein laayega, dur dur nahi rahenge */
+            align-items: center;
+            gap: 400px;
+            /* PORTFOLIO aur Links ke beech ka distance */
+        }
+
+        #port_text {
+            color: #ffffff;
+            font-family: "Baloo Bhai 2", sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        #navlink1,
+        #navlink2,
+        #navlink3,
+        #navlink4 {
+            text-decoration: none;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: capitalize;
+            padding-left: 0;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            /* Hover effect ke liye smooth transition */
+        }
+
+        #navlink1:hover,
+        #navlink2:hover,
+        #navlink3:hover,
+        #navlink4:hover {
+            color: #FF8660;
+        }
+
+        #contact_info_div {
+            background-color: #191919;
+            padding-left: 350px;
+            padding-right: 350px;
+            border-color: red;
+        }
+
+        #contact_info {
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            background-color: #191919;
+        }
+
+        #con_main {
+            background-color: #0c0c0c;
+            color: #ffffff;
+            font-size: 30px;
+            font-family: 'baloo bhai 2', sans-serif;
+            padding-left: 350px;
+            padding-right: 350px;
+        }
+
+        #thought_con {
+            font-style: italic;
+        }
+
+        #con_email {
+            text-align: center;
+            text-decoration: none;
+            background-color: #ffffff;
+            color: #161513;
+            font-size: 15px;
+            font-weight: bold;
+            width: 130px;
+            height: 50px;
+            border-width: 1px;
+            border-radius: 25px;
+        }
+
+        #con_resume {
+            text-align: center;
+            text-decoration: none;
+            background-color: #161513;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: bold;
+            width: 170px;
+            height: 50px;
+            border-color: #ffffff;
+            border-width: 2px;
+            border-radius: 25px;
+        }
+
+        #con_email:hover {
+            border-color: black;
+            border-radius: 25px;
+            border-width: 4px;
+        }
+
+        #con_resume:hover {
+            border-color: white;
+            border-radius: 25px;
+            border-width: 4px;
+        }
+
+        #connect {
+            color: red;
+            font-weight: bold;
+
+        }
+
+        #contact_info_div_con {
+            background-color: #222222;
+            padding-left: 350px;
+            padding-right: 350px;
+        }
+
+        #contact_info_con {
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        #con_text {
+            font-family: 'baloo bhai 2', 'sans-sarif';
+            font-size: 30px;
+        }
+
+        #con_text:hover {
+            color: red;
+        }
+
+        #email {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        #email:hover {
+            color: red;
+        }
+
+        #email_logo {
+            height: 20px;
+            width: 20px;
+        }
+
+        #Download_cv {
+            text-align: center;
+            text-decoration: none;
+            background-color: #161513;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: bold;
+            width: 130px;
+            height: 50px;
+            border-color: #ffffff;
+            border-width: 2px;
+            border-radius: 25px;
+        }
+
+        #contact_button {
+            text-align: center;
+            text-decoration: none;
+            background-color: #ffffff;
+            color: #161513;
+            font-size: 15px;
+            font-weight: bold;
+            width: 130px;
+            height: 50px;
+            border-width: 1px;
+            border-radius: 25px;
+        }
+
+        #social_img {
+            height: 30px;
+            width: 30px;
+        }
+
+
+/* Large Tablets & Small Desktops (max-width: 1200px) */
+@media (max-width: 1200px) {
+    #navbar {
+        gap: 200px;
+    }
+
+    #contact_info_div,
+    #contact_info_div_con {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
+    #con_main {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    #navbar {
+        gap: 100px;
+        padding: 20px 30px;
+    }
+
+    #port_text {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        gap: 25px;
+    }
+
+    #navlink1,
+    #navlink2,
+    #navlink3,
+    #navlink4 {
+        font-size: 15px;
+    }
+
+    #contact_info_div,
+    #contact_info_div_con {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    #con_main {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+/* Small Tablets / Large Phones Landscape (max-width: 768px) */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 20px;
+    }
+
+    #port_text {
+        font-size: 26px;
+    }
+
+    .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #navlink1,
+    #navlink2,
+    #navlink3,
+    #navlink4 {
+        font-size: 15px;
+    }
+
+    #contact_info_div,
+    #contact_info_div_con {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    #con_main {
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 24px;
+    }
+
+    #con_text {
+        font-size: 26px;
+    }
+
+    #con_text_q {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    #thought_con {
+        font-size: 15px;
+    }
+}
+
+/* Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    #navbar {
+        padding: 15px 15px;
+        gap: 15px;
+    }
+
+    #port_text {
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    #navlink1,
+    #navlink2,
+    #navlink3,
+    #navlink4 {
+        font-size: 13px;
+    }
+
+    #contact_info_div,
+    #contact_info_div_con {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #con_main {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 20px;
+    }
+
+    #con_text {
+        font-size: 22px;
+    }
+
+    #con_text_q {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    #thought_con {
+        font-size: 13px;
+    }
+
+    /* Buttons stack vertically on small screens */
+    #con_email,
+    #con_resume {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        margin: 10px auto;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    #contact_button,
+    #Download_cv {
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 25px;
+    }
+
+    #email_logo {
+        height: 18px;
+        width: 18px;
+    }
+
+    #email {
+        font-size: 14px;
+        word-break: break-all;
+    }
+
+    #social_img {
+        height: 26px;
+        width: 26px;
+    }
+
+    #socials {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    #contact_info_con p {
+        font-size: 13px;
+    }
+}
+
+/* Very Small Phones (max-width: 360px) */
+@media (max-width: 360px) {
+    #port_text {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    #navlink1,
+    #navlink2,
+    #navlink3,
+    #navlink4 {
+        font-size: 12px;
+    }
+
+    #contact_info_div,
+    #contact_info_div_con {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #con_main {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #con_text_q {
+        font-size: 13px;
+    }
+
+    #email {
+        font-size: 12px;
+    }
+}
+
+/* Landscape Orientation for Phones */
+@media (max-height: 500px) and (orientation: landscape) {
+    #navbar {
+        padding: 10px 20px;
+    }
+
+    #contact_info_div,
+    #contact_info_div_con {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #con_text_q br {
+        display: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    #navbar,
+    #socials,
+    button {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    #contact_info_div,
+    #contact_info_div_con {
+        background: white;
+        color: black;
+        padding: 20px;
+    }
+
+    #contact_info,
+    #contact_info_con {
+        background: white;
+        color: black;
+    }
+
+    #email,
+    #con_text {
+        color: black;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+            <span><a id="port_text">PORTFOLIO</a></span>
+            <div class="nav-links">
+                <span><a href="index.html" id="navlink1">Home</a></span>
+                <span><a href="index.html" id="navlink2">About</a></span>
+                <span><a href="projects.html" id="navlink3">Projects</a></span>
+                <span><a href="experience.html" id="navlink4">Experience</a></span>
+            </div>
+    </header>
+    <main>
+        <div id="contact_info_div">
+            <section id="contact_info">
+                <br>
+                <br>
+                <br>
+                <p id="con_text">CONTACT</p>
+                <br>
+                <p id="con_text_q">
+                    I'm available for freelance work and full-time roles.<br>
+                    Reach out to discuss how I can contribute to your team.<br><br>
+                    <a id="thought_con">"Your thoughts matter. Let's connect and create something meaningful
+                        together."</a><br>
+                    <a id="thought_con">"I usually reply within 24 hours."</a>
+                </p>
+                <br>
+                <p>
+                    <img src="https://img.icons8.com/?size=100&id=ATSHsatBkUOH&format=png&color=FFFFFF" alt="email_logo"
+                        id="email_logo">
+                    <a href="mailto:aryanmourya1250@gmail.com" id="email">Aryanmourya1250@gmail.com</a>
+                    <br>
+                    <br>
+                    <button id="con_email"><a href="mailto:aryanmourya1250@gmail.com" id="contact_button">Let's
+                            Connect</a></button>
+                    <button id="con_resume"><a href="https://bit.ly/4sE4cYg" id="Download_cv">Download
+                            Resume</a></button>
+                </p>
+            </section>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </main>
+    <footer>
+        <div id="contact_info_div_con">
+            <div id="contact_info_con">
+                <br>
+                <br>
+                <br>
+                <p>© 2026 Aryan Mourya. All rights reserved.</p>
+                <br>
+                <p id="socials">
+                    <a href="https://www.instagram.com/the__ark.0/" alt="insta_link"><img
+                            src="https://img.icons8.com/?size=100&id=32309&format=png&color=FFFFFF" alt=""
+                            id="social_img"></a>
+                    <a href="https://github.com/m-aryan2006/" alt="github_link"><img
+                            src="https://img.icons8.com/?size=100&id=YSWCDCSF4H3N&format=png&color=FFFFFF" alt="github"
+                            id="social_img"></a>
+                    <a href="https://www.linkedin.com/in/aryankumarmourya/" alt="linkedin_link"><img
+                            src="https://img.icons8.com/?size=100&id=IuI5Yd3J3qcC&format=png&color=FFFFFF"
+                            alt="linkedin" id="social_img"></a>
+                    <a href="" alt=""><img src="" alt=""></a>
+                    <a href="" alt=""><img src="" alt=""></a>
+                </p>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
